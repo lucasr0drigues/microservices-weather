@@ -40,6 +40,9 @@ namespace CloudWeather.Report.Migrations
                     b.Property<decimal>("RainfallTotalInches")
                         .HasColumnType("numeric");
 
+                    b.Property<decimal>("SnowTotalInches")
+                        .HasColumnType("numeric");
+
                     b.Property<string>("ZipCode")
                         .IsRequired()
                         .HasColumnType("text");

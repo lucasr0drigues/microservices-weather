@@ -18,6 +18,7 @@ namespace CloudWeather.Report.Migrations
                     AverageHighF = table.Column<decimal>(type: "numeric", nullable: false),
                     AverageLowF = table.Column<decimal>(type: "numeric", nullable: false),
                     RainfallTotalInches = table.Column<decimal>(type: "numeric", nullable: false),
+                    SnowTotalInches = table.Column<decimal>(type: "numeric", nullable: false),
                     ZipCode = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>

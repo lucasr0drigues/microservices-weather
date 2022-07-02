@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CloudWeather.Report.Migrations
 {
     [DbContext(typeof(WeatherReportDbContext))]
-    [Migration("20220701152001_init")]
+    [Migration("20220702205608_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,6 +40,9 @@ namespace CloudWeather.Report.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal>("RainfallTotalInches")
+                        .HasColumnType("numeric");
+
+                    b.Property<decimal>("SnowTotalInches")
                         .HasColumnType("numeric");
 
                     b.Property<string>("ZipCode")
