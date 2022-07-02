@@ -9,7 +9,7 @@ namespace CloudWeather.Report.BusinessLogic
     /// <summary>
     /// Aggregates data from multiple external sources to build a weather report
     /// </summary>
-    public interface IWeatherAggregator
+    public interface IWeatherReportAggregator
     {
         /// <summary>
         /// builds and returns a weekly weather report.
@@ -18,10 +18,10 @@ namespace CloudWeather.Report.BusinessLogic
         /// <param name="zip"></param>
         /// <param name="days"></param>
         /// <returns></returns>
-        public Task<WeatherReport> BuildWeeklyReport(string zip, int days);
+        public Task<WeatherReport> BuildReport(string zip, int days);
     }
 
-    public class WeatherReportAggregator : IWeatherAggregator
+    public class WeatherReportAggregator : IWeatherReportAggregator
     {
         private readonly IHttpClientFactory _http;
         private readonly ILogger<WeatherReportAggregator> _logger;
@@ -36,7 +36,7 @@ namespace CloudWeather.Report.BusinessLogic
             _db = db;
         }
 
-        public async Task<WeatherReport> BuildWeeklyReport(string zip, int days)
+        public async Task<WeatherReport> BuildReport(string zip, int days)
         {
             var httpClient = _http.CreateClient();
 
