@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CloudWeather.DataLoader": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

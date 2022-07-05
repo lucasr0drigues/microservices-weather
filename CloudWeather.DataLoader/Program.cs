@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System.Net.Http.Json;
 
 IConfiguration config = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json")
+    .AddJsonFile("appSettings.json")
     .AddEnvironmentVariables()
     .Build();
 
